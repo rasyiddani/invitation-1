@@ -20,6 +20,60 @@ gsap.to("#butterfly", {
   ease: "sine.inOut"
 });
 
+gsap.to("#gununganleft", {
+  rotation: 5,
+  transformOrigin: "bottom center",
+  duration: 2,
+  yoyo: true,
+  repeat: -1,
+  ease: "sine.inOut"
+});
+
+gsap.to("#gununganright", {
+  rotation: 175,
+  transformOrigin: "bottom center",
+  duration: 2,
+  yoyo: true,
+  repeat: -1,
+  ease: "sine.inOut"
+});
+
+gsap.to("#flowerLeft", {
+  x: 15,
+  duration: 2,
+  repeat: -1,
+  yoyo: true,
+  ease: "sine.inOut"
+});
+
+// Flower kanan gerak kiri-kanan (mirror + delay)
+gsap.to("#flowerRight", {
+  x: -15,
+  duration: 2,
+  repeat: -1,
+  yoyo: true,
+  delay: 0.5,
+  ease: "sine.inOut"
+});
+
+gsap.to("#flowerRightCenter", {
+  rotation: 5,
+  transformOrigin: "bottom center",
+  duration: 2,
+  yoyo: true,
+  repeat: -1,
+  ease: "sine.inOut"
+});
+
+gsap.to("#flowerLeftCenter", {
+  rotation: -5,
+  transformOrigin: "bottom center",
+  duration: 2,
+  yoyo: true,
+  repeat: -1,
+  ease: "sine.inOut"
+});
+
 // Transisi ke halaman utama
 document.getElementById("openBtn").addEventListener("click", () => {
   gsap.to("#coverPage", {
