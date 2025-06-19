@@ -11,9 +11,17 @@ gsap.from("#title",       { y: 30,   opacity: 0, duration: 1, delay: 0.7 });
 gsap.from("#openBtn",     { opacity: 0, duration: 1, delay: 1 });
 
 // Animasi kupu-kupu
-gsap.to("#butterfly", {
+gsap.to("#butterfly1", {
   y: "-=15",
   rotation: 10,
+  duration: 2,
+  repeat: -1,
+  yoyo: true,
+  ease: "sine.inOut"
+});
+gsap.to("#butterfly2", {
+  y: "-=15",
+  rotation: 165,
   duration: 2,
   repeat: -1,
   yoyo: true,
@@ -23,7 +31,7 @@ gsap.to("#butterfly", {
 gsap.to("#gununganleft", {
   rotation: 5,
   transformOrigin: "bottom center",
-  duration: 2,
+  duration: 1.5,
   yoyo: true,
   repeat: -1,
   ease: "sine.inOut"
@@ -71,6 +79,14 @@ gsap.to("#flowerLeftCenter", {
   duration: 2,
   yoyo: true,
   repeat: -1,
+  ease: "sine.inOut"
+});
+
+gsap.to("#openBtn", {
+  scale: 1.1,
+  duration: 1.5,
+  repeat: -1,
+  yoyo: true,
   ease: "sine.inOut"
 });
 

@@ -49,30 +49,37 @@ img {
 #flowerRightCenter{ bottom: 0; right: 50%;  z-index: 10; width: 40%; }
 #wayangLeft  { bottom: 20%; left: -5%;  z-index: 6; width: 35%; }
 #wayangRight { bottom: 20%; right: -5%; z-index: 6; width: 35%; }
-#butterfly   { top: 40%;  left: 45%;  width: 50px; z-index: 12; }
-
+#butterfly1   { top: 40%;  left: 15%;  width: 50px; z-index: 12; }
+#butterfly2   { bottom: 20%;  right: 6%;  width: 50px; z-index: 12; transform: scaleX(-1) }
 /* Text & Button */
 h1 {
-  position: relative;
-  margin-top: 60%;
-  text-align: center;
-  font-size: 1.8rem;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
   color: #fff;
-  opacity: 0;
+  text-align: center;
+  opacity: 1;
   z-index: 7;
 }
+
 .button {
-  position: relative;
-  margin-top: 10px;
-  padding: 10px 25px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 28px;
+  font-family: 'Great Vibes', serif;
   font-size: 16px;
-  color: #fff;
   background: #c9a78f;
+  color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  opacity: 0;
-  z-index: 7;
+  opacity: 1;
+  z-index: 12;
 }
 
 .overlay {
@@ -91,5 +98,9 @@ h1 {
   }
   h1 {
     font-size: 1.4rem;
+    font-size: 40px;
+  }
+  .button {
+    font-size: 16px;
   }
 }
