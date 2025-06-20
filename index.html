@@ -16,7 +16,16 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
-    <audio type="audio/mp3" src="./asset/Backsound.mp3" autoplay loop></audio>
+    <audio id="bgMusic" type="audio/mp3" src="./asset/Backsound.mp3" preload="auto">
+        <source src="./asset/Backsound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.addEventListener('click', function() {
+            var audio = document.getElementById('bgMusic');
+            audio.play();
+        }, { once: true });
+    </script>
     <!-- Cover Page -->
     <section id="coverPage">
       <div class="inner-wrapper">
