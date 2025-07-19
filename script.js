@@ -20,7 +20,17 @@ const countdown = setInterval(function () {
   }
 }, 1000);
 
+// ------------------- nama undangan -------------------------- //
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const nama = urlParams.get('nama');
+
+
+if (nama) {
+  document.getElementById('nama-undangan').innerHTML = `Untuk : <br> ${nama} `;
+}
+// ------------------- animasi animasu -------------------------- //
 // Animasi masuk
 gsap.from("#gebyok", { y: -200, opacity: 0, duration: 1 });
 gsap.from("#treeLeft", { x: -200, opacity: 0, duration: 1 });
@@ -295,3 +305,46 @@ gsap.to("#flowerRight-thanks", {
   repeat: -1,
   yoyo: true,
 });
+
+
+// ------------------- form undangan -------------------------- //
+if (nama) {
+    document.getElementById('nama-form').value = decodeURIComponent(nama);
+  }
+
+  const submitBtn = document.getElementById('submitBtn');
+  document.getElementById('form-undangan').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    submitBtn.textContent = "Mengirim Data...";
+    submitBtn.disabled = true;
+
+    const data = {
+      nama: document.getElementById('nama-form').value,
+      doa: document.getElementById('doa').value,
+      kehadiran: document.getElementById('kehadiran').value
+    };
+
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyZEoewFqxDiwWp60V_4PY8PmNFqWwLJtwL6XANTXR9YBjHS2MlvokakUDfk0cKc89Wvg/exec", {
+      method: "POST",
+      body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        document.getElementById('status').textContent = "🙏 Terima kasih, data Anda sudah tersimpan!";
+        document.getElementById('form-undangan').reset();
+      } else {
+        document.getElementById('status').textContent = "⚠️ Gagal menyimpan data.";
+        document.getElementById('status').style.color = "red";
+      }
+    } catch (err) {
+      document.getElementById('status').textContent = "⚠️ Terjadi kesalahan jaringan.";
+      document.getElementById('status').style.color = "red";
+    } finally {
+      
+      submitBtn.textContent = "Kirim";
+      submitBtn.disabled = false;
+    }
+  });
+

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Undangan Clarissa & Sandro</title>
+    <title>Undangan Yusuf & Windy</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -46,6 +46,7 @@
         <img id="butterfly2" src="asset/Asset Butterfly.png" />
 
         <h1 id="title">Yusuf & Windy</h1>
+        <h1 id="nama-undangan"></h1>
         <button class="button" id="openBtn">Buka Undangan</button>
       </div>
     </section>
@@ -230,6 +231,26 @@
                 Youtube</a>
             </button>
           </div>
+        </div>
+        <div class="form-undangan-section">
+          <h2 class="form-undangan-title">Konfirmasi Kehadiran</h2>
+          <form id="form-undangan">
+            <label class="form-undangan-label" for="nama-form">Nama</label>
+            <input class="form-undangan-input" type="text" id="nama-form" name="nama-form" placeholder="Nama Anda" required>
+
+            <label class="form-undangan-label" for="doa">Titip Doa</label>
+            <textarea class="form-undangan-textarea" id="doa" name="doa" rows="4" placeholder="Tuliskan doa Anda..."></textarea>
+
+            <label class="form-undangan-label" for="kehadiran">Kehadiran</label>
+            <select class="form-undangan-select" id="kehadiran" name="kehadiran" required>
+              <option value="">-- Pilih Kehadiran --</option>
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Tidak Hadir</option>
+            </select>
+            
+            <button class="form-undangan-button" id="submitBtn" type="submit">Kirim</button>
+            <p class="form-undangan-status" id="status"></p>
+          </form>
         </div>
         <div class="section-thanks">
           <img id="gebyok-thanks" src="asset/Asset Gebyok.png" />

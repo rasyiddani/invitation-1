@@ -53,6 +53,12 @@ img {
   max-width: 100%;
   pointer-events: none;
 }
+
+#nama-undangan {
+  top: 2%;
+  font-size: 25pt;
+}
+
 #gebyok {
   top: 10%;
   left: 50%;
@@ -445,4 +451,69 @@ h1 {
   z-index: 8;
   width: 40%;
   transform: scaleX(-1);
+}
+
+/* form undangan */
+.form-undangan-section {
+  text-align: center;
+  border: 1px solid #cbad9f;
+  border-radius: 10px;
+  width: 75%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 30px 20px;
+  background-color: rgba(255, 241, 235, 0.9);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  font-family: "Gabriela", serif;
+}
+
+.form-undangan-title {
+  color: #735C3D;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-undangan-label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  color: #735C3D;
+  font-weight: bold;
+}
+
+.form-undangan-input, 
+.form-undangan-textarea, 
+.form-undangan-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbad9f;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: rgba(255,255,255,0.8);
+  color: #735C3D;
+  font-family: "Gabriela", serif;
+}
+
+.form-undangan-button {
+  width: 100%;
+  padding: 12px;
+  background: #cbad9f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-undangan-button:hover {
+  background: #a48373;
+}
+
+.form-undangan-status {
+  text-align: center;
+  color: #4CAF50;
+  font-weight: bold;
+  margin-top: 10px;
 }
