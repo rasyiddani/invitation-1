@@ -1,22 +1,30 @@
-const weddingDate = new Date('July 27, 2025 08:00:00').getTime();
+const weddingDate = new Date("July 27, 2025 08:00:00").getTime();
 
 const countdown = setInterval(function () {
   const now = new Date().getTime();
   const distance = weddingDate - now;
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
-  document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
-  document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
-  document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+  document.getElementById("days").innerHTML = days.toString().padStart(2, "0");
+  document.getElementById("hours").innerHTML = hours
+    .toString()
+    .padStart(2, "0");
+  document.getElementById("minutes").innerHTML = minutes
+    .toString()
+    .padStart(2, "0");
+  document.getElementById("seconds").innerHTML = seconds
+    .toString()
+    .padStart(2, "0");
 
   if (distance < 0) {
     clearInterval(countdown);
-    document.getElementById('countdown').innerHTML = 'Acara telah dimulai';
+    document.getElementById("countdown").innerHTML = "Acara telah dimulai";
   }
 }, 1000);
 
@@ -24,11 +32,10 @@ const countdown = setInterval(function () {
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const nama = urlParams.get('nama');
-
+const nama = urlParams.get("nama");
 
 if (nama) {
-  document.getElementById('nama-undangan').innerHTML = `Untuk : <br> ${nama} `;
+  document.getElementById("nama-undangan").innerHTML = `Untuk : <br> ${nama}`;
 }
 // ------------------- animasi animasu -------------------------- //
 // Animasi masuk
@@ -50,7 +57,7 @@ gsap.to("#butterfly1", {
   duration: 2,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 gsap.to("#butterfly2", {
   y: "-=15",
@@ -58,7 +65,7 @@ gsap.to("#butterfly2", {
   duration: 2,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#gununganleft", {
@@ -67,7 +74,7 @@ gsap.to("#gununganleft", {
   duration: 1.5,
   yoyo: true,
   repeat: -1,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#gununganright", {
@@ -76,7 +83,7 @@ gsap.to("#gununganright", {
   duration: 2,
   yoyo: true,
   repeat: -1,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#flowerLeft", {
@@ -84,7 +91,7 @@ gsap.to("#flowerLeft", {
   duration: 2,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 // Flower kanan gerak kiri-kanan (mirror + delay)
@@ -94,7 +101,7 @@ gsap.to("#flowerRight", {
   repeat: -1,
   yoyo: true,
   delay: 0.5,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#flowerRightCenter", {
@@ -103,7 +110,7 @@ gsap.to("#flowerRightCenter", {
   duration: 2,
   yoyo: true,
   repeat: -1,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#flowerLeftCenter", {
@@ -112,7 +119,7 @@ gsap.to("#flowerLeftCenter", {
   duration: 2,
   yoyo: true,
   repeat: -1,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#openBtn", {
@@ -120,7 +127,7 @@ gsap.to("#openBtn", {
   duration: 1.5,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 // Transisi ke halaman utama
@@ -132,7 +139,7 @@ document.getElementById("openBtn").addEventListener("click", () => {
       document.getElementById("coverPage").style.display = "none";
       document.getElementById("mainPage").style.display = "flex";
       gsap.from("#mainPage", { opacity: 0, duration: 1 });
-    }
+    },
   });
 });
 
@@ -144,7 +151,7 @@ gsap.to("#flower-left-bride", {
   duration: 2,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 // Flower kanan gerak kiri-kanan (mirror + delay)
@@ -154,7 +161,7 @@ gsap.to("#flower-right-bride", {
   repeat: -1,
   yoyo: true,
   delay: 0.5,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.from("#gunungan-left-detail", { left: -200, duration: 1, delay: 0.2 });
@@ -168,7 +175,7 @@ gsap.to("#gunungan-left-detail", {
   duration: 2,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#gunungan-right-detail", {
@@ -177,7 +184,7 @@ gsap.to("#gunungan-right-detail", {
   duration: 2,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#wayangLeft-detail", {
@@ -199,7 +206,7 @@ gsap.to("#butterfly-photo", {
   duration: 2,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#flower-photo-left1", {
@@ -208,7 +215,7 @@ gsap.to("#flower-photo-left1", {
   duration: 2,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#flower-photo-left2", {
@@ -217,7 +224,7 @@ gsap.to("#flower-photo-left2", {
   duration: 2,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#flower-photo-right1", {
@@ -226,7 +233,7 @@ gsap.to("#flower-photo-right1", {
   duration: 2,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
 gsap.to("#flower-photo-right2", {
@@ -235,14 +242,24 @@ gsap.to("#flower-photo-right2", {
   duration: 2,
   repeat: -1,
   yoyo: true,
-  ease: "sine.inOut"
+  ease: "sine.inOut",
 });
 
-gsap.from("#gebyok-thanks", {  y: 200, duration: 1, delay: 0.2 });
+gsap.from("#gebyok-thanks", { y: 200, duration: 1, delay: 0.2 });
 gsap.from("#treeLeft-thanks", { x: -200, y: 200, duration: 1, delay: 0.2 });
 gsap.from("#treeRight-thanks", { x: 200, y: 200, duration: 1, delay: 0.2 });
-gsap.from("#gununganleft-thanks", { x: -200, y: -200, duration: 1, delay: 0.2 });
-gsap.from("#gununganright-thanks", { x: 200, y: -200, duration: 1, delay: 0.2 });
+gsap.from("#gununganleft-thanks", {
+  x: -200,
+  y: -200,
+  duration: 1,
+  delay: 0.2,
+});
+gsap.from("#gununganright-thanks", {
+  x: 200,
+  y: -200,
+  duration: 1,
+  delay: 0.2,
+});
 gsap.from("#wayangLeft-thanks", { x: -200, y: -200, duration: 1, delay: 0.2 });
 gsap.from("#wayangRight-thanks", { x: 200, y: -200, duration: 1, delay: 0.2 });
 gsap.from("#flowerCenter-thanks1", { y: 200, duration: 1, delay: 0.2 });
@@ -306,45 +323,87 @@ gsap.to("#flowerRight-thanks", {
   yoyo: true,
 });
 
+if (nama) {
+  document.getElementById("nama-undangan-inner").innerHTML = `${nama}`;
+}
 
 // ------------------- form undangan -------------------------- //
 if (nama) {
-    document.getElementById('nama-form').value = decodeURIComponent(nama);
-  }
+  document.getElementById("nama-form").value = decodeURIComponent(nama);
+}
 
-  const submitBtn = document.getElementById('submitBtn');
-  document.getElementById('form-undangan').addEventListener('submit', async function (e) {
+const submitBtn = document.getElementById("submitBtn");
+document
+  .getElementById("form-undangan")
+  .addEventListener("submit", async function (e) {
     e.preventDefault();
 
     submitBtn.textContent = "Mengirim Data...";
     submitBtn.disabled = true;
 
     const data = {
-      nama: document.getElementById('nama-form').value,
-      doa: document.getElementById('doa').value,
-      kehadiran: document.getElementById('kehadiran').value
+      nama: document.getElementById("nama-form").value,
+      doa: document.getElementById("doa").value,
+      kehadiran: document.getElementById("kehadiran").value,
     };
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbyZEoewFqxDiwWp60V_4PY8PmNFqWwLJtwL6XANTXR9YBjHS2MlvokakUDfk0cKc89Wvg/exec", {
-      method: "POST",
-      body: JSON.stringify(data)
-      });
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbyZEoewFqxDiwWp60V_4PY8PmNFqWwLJtwL6XANTXR9YBjHS2MlvokakUDfk0cKc89Wvg/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+        }
+      );
 
       if (response.ok) {
-        document.getElementById('status').textContent = "🙏 Terima kasih, data Anda sudah tersimpan!";
-        document.getElementById('form-undangan').reset();
+        document.getElementById("status").textContent =
+          "🙏 Terima kasih, data Anda sudah tersimpan!";
+        document.getElementById("form-undangan").reset();
       } else {
-        document.getElementById('status').textContent = "⚠️ Gagal menyimpan data.";
-        document.getElementById('status').style.color = "red";
+        document.getElementById("status").textContent =
+          "⚠️ Gagal menyimpan data.";
+        document.getElementById("status").style.color = "red";
       }
     } catch (err) {
-      document.getElementById('status').textContent = "⚠️ Terjadi kesalahan jaringan.";
-      document.getElementById('status').style.color = "red";
+      document.getElementById("status").textContent =
+        "⚠️ Terjadi kesalahan jaringan.";
+      document.getElementById("status").style.color = "red";
     } finally {
-      
       submitBtn.textContent = "Kirim";
       submitBtn.disabled = false;
     }
   });
 
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  captionText.innerHTML = dots[slideIndex - 1].alt;
+}

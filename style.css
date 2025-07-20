@@ -351,7 +351,7 @@ h1 {
   transform: translate(-50%);
   padding: 35px 20px;
   background-color: rgba(255, 241, 235, 0.8);
-  margin: 70px 0 0 0;
+  margin: 170px 0 0 0;
 }
 
 .vertical-line {
@@ -519,4 +519,107 @@ h1 {
   color: #4CAF50;
   font-weight: bold;
   margin-top: 10px;
+}
+
+.slider {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  height: 500px;
+  padding: 0 50px;
+}
+
+.slider img {
+  vertical-align: middle;
+}
+
+.slider .container {
+  position: relative;
+}
+
+.slider .mySlides {
+  height: 500px;
+  background-color: black;
+}
+
+.slider .mySlides img{
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.slider .cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.slider .prev,
+.slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgb(160,140,124);
+  opacity: 0.7;
+}
+
+/* Position the "next button" to the right */
+.slider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.slider .prev:hover,
+.slider .next:hover {
+  background-color: rgb(160,140,124);
+  opacity: 1;
+}
+
+/* Number text (1/3 etc) */
+.slider .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.slider .row {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60px;
+}
+
+.slider .column {
+  width: 40px;
+  height: 60px;
+  margin: 5px;
+}
+
+.slider .column img{
+  width: 40px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.demo {
+  opacity: 0.6;
+}
+
+.slider .active,
+.slider .demo:hover {
+  opacity: 1;
+  border: 2px solid rgb(160,140,124);
 }

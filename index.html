@@ -9,23 +9,31 @@
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"
+    />
 
     <!-- GSAP CDN -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
-    <audio id="bgMusic" type="audio/mp3" src="./asset/Backsound.mp3"
-      preload="auto">
-      <source src="./asset/Backsound.mp3" type="audio/mpeg">
+    <audio
+      id="bgMusic"
+      type="audio/mp3"
+      src="./asset/Backsound.mp3"
+      preload="auto"
+    >
+      <source src="./asset/Backsound.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
     <script>
-        document.addEventListener('click', function() {
-            var audio = document.getElementById('bgMusic');
-            audio.play();
-        }, { once: true });
+      document.addEventListener(
+        "click",
+        function () {
+          var audio = document.getElementById("bgMusic");
+          audio.play();
+        },
+        { once: true }
+      );
     </script>
     <!-- Cover Page -->
     <section id="coverPage">
@@ -52,227 +60,406 @@
     </section>
 
     <!-- Main Page -->
-    <section id="mainPage" style="display:none; background:#fff;">
+    <section id="mainPage" style="display: none; background: #fff">
       <!-- <section id="mainPage" style=" background:#fff;"> -->
       <div class="inner-wrapper">
         <video
-          style="width: 100%; height: 105vh; object-fit: cover; pointer-events: none;"
+          style="
+            width: 100%;
+            height: 105vh;
+            object-fit: cover;
+            pointer-events: none;
+          "
           src="./asset/Asset Welcome.mp4"
           autoplay
           muted
           loop
-          playsinline>
-        </video>
-        <div class="section-intro" style="position: relative;">
-          <div class="wedding-name" style="text-align: center;">
-            <p style="margin: 50px 0 0 0;">The Wedding Of</p>
+          playsinline
+        ></video>
+        <div class="section-intro" style="position: relative">
+          <div class="wedding-name" style="text-align: center">
+            <p style="margin: 50px 0 0 0">The Wedding Of</p>
             <h2
-              style="margin: 30px 0 0 0;font-family: 'Great Vibes', serif;font-size: 40px; color: #7E4B5E;">Windy
-              &</h2>
+              style="
+                margin: 30px 0 0 0;
+                font-family: 'Great Vibes', serif;
+                font-size: 40px;
+                color: #7e4b5e;
+              "
+            >
+              Windy &
+            </h2>
             <h2
-              style="margin: 0 0 30px 0;font-family: 'Great Vibes', serif;font-size: 40px;color: #7E4B5E">Yusuf</h2>
+              style="
+                margin: 0 0 30px 0;
+                font-family: 'Great Vibes', serif;
+                font-size: 40px;
+                color: #7e4b5e;
+              "
+            >
+              Yusuf
+            </h2>
           </div>
-          <div class="card-invit">
-            <p style="color: #7E4B5E">Kepada Bapak/Ibu/Saudara/i,</p>
-            <p style="margin: 0 0 40px 0; color: #7E4B5E">Keluarga &
-              Teman-teman</p>
-            <p>"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan diantaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
-            <p style="margin: 20px 0 0 0;">(Q.S. Ar-Rum: 21)</p>
+          <img
+            style="
+              width: 50%;
+              position: relative;
+              left: 50%;
+              transform: translate(-50%, 10%);
+              border-radius: 100px;
+              z-index: 10;
+            "
+            src="./asset/Asset img-4.jpg"
+            alt=""
+          />
+          <div
+            class="card-invit"
+            style="
+              padding: 200px 0 0 0;
+              position: relative;
+              transform: translate(-50%, -30%);
+            "
+          >
+            <p style="color: #7e4b5e">Kepada Bapak/Ibu/Saudara/i,</p>
+            <p
+              id="nama-undangan-inner"
+              style="margin: 0 0 20px 0; color: #7e4b5e; font-weight: bold"
+            ></p>
+            <p>
+              "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+              pasangan-pasangan untukmu dari jenismu sendiri, agar kamu
+              cenderung dan merasa tenteram kepadanya, dan Dia menjadikan
+              diantaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu
+              benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang
+              berpikir."
+            </p>
+            <p style="margin: 20px 0 20px 0">(Q.S. Ar-Rum: 21)</p>
           </div>
         </div>
-        <div class="section-women" style="margin: 150px 0 0 0;">
+        <div class="section-women" style="margin: 50px 0 0 0">
           <div class="card-bride">
             <img
               src="./asset/Asset Windy.jpg"
               alt="Pengantin Wanita"
-              style="display: block; width: 100%; position: relative; left: 50%; transform: translate(-50%); margin: -100px 0 0 0; border-radius: 10px; border: 2px solid #CBAD9F;">
+              style="
+                display: block;
+                width: 100%;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
+                margin: -100px 0 0 0;
+                border-radius: 10px;
+                border: 2px solid #cbad9f;
+              "
+            />
             <img id="flower-left-bride" src="asset/Asset Flower 1.png" />
             <img id="flower-right-bride" src="asset/Asset Flower 1.png" />
             <h2
-              style="margin: 30px 0;font-family: 'Great Vibes', serif;font-size: 40px;color: #7E4B5E">Windy</h2>
+              style="
+                margin: 30px 0;
+                font-family: 'Great Vibes', serif;
+                font-size: 40px;
+                color: #7e4b5e;
+              "
+            >
+              Windy
+            </h2>
             <p>Windy Prapita Sari</p>
             <img
               src="https://raw.githubusercontent.com/Invitato/public/f7e2d04a3f0ca80c07faf5ff34c0f85932b681f1/invitato.net/template-clarissasandro/Asset%20Kawung%20Simbol.svg"
               alt="butterfly"
-              style="position: relative; width: 30px;">
+              style="position: relative; width: 30px"
+            />
             <p>Putri ke empat dari</p>
             <p>Bappk Abdul Mukti</p>
             <p>& Ibu Titien Suprihatinsih</p>
             <button class="igBtn">
-              <a href>@nama ig</a>
+              <a href="https://www.instagram.com/windyprapita/">@windyprapita</a>
             </button>
           </div>
         </div>
-        <div class="section-men" style="margin: 100px 0 50px 0;">
+        <div class="section-men" style="margin: 100px 0 50px 0">
           <div class="card-bride">
             <img
               src="./asset/Asset Yusuf.jpg"
               alt="Pengantin Laki"
-              style="display: block; width: 100%; position: relative; left: 50%; transform: translate(-50%); margin: -100px 0 0 0; border-radius: 10px; border: 2px solid #CBAD9F;">
+              style="
+                display: block;
+                width: 100%;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
+                margin: -100px 0 0 0;
+                border-radius: 10px;
+                border: 2px solid #cbad9f;
+              "
+            />
             <img id="flower-left-bride" src="asset/Asset Flower 1.png" />
             <img id="flower-right-bride" src="asset/Asset Flower 1.png" />
             <h2
-              style="margin: 30px 0;font-family: 'Great Vibes', serif;font-size: 40px;color: #7E4B5E">Yusuf</h2>
+              style="
+                margin: 30px 0;
+                font-family: 'Great Vibes', serif;
+                font-size: 40px;
+                color: #7e4b5e;
+              "
+            >
+              Yusuf
+            </h2>
             <p>Muhammad Yusuf Qordhawi</p>
             <img
               src="https://raw.githubusercontent.com/Invitato/public/f7e2d04a3f0ca80c07faf5ff34c0f85932b681f1/invitato.net/template-clarissasandro/Asset%20Kawung%20Simbol.svg"
               alt="butterfly"
-              style="position: relative; width: 30px;">
+              style="position: relative; width: 30px"
+            />
             <p>Putra pertama dari</p>
             <p>Bapak H. Suhartanto</p>
             <p>& Ibu Ngatmi</p>
             <button class="igBtn">
-              <a href>@nama ig</a>
+              <a href="https://www.instagram.com/muhammad.yusuf.q/">@muhammad.yusuf.q
+
+              </a>
             </button>
           </div>
         </div>
-        <div class="section-love-story">
-        </div>
+        <div class="section-love-story"></div>
         <div class="section-detail-wedding">
           <img id="gebyok-top-detail" src="asset/Asset Gebyok Part Top.png" />
           <img id="gebyok-left-detail" src="asset/Asset Gebyok Part Left.png" />
-          <img id="gebyok-right-detail"
-            src="asset/Asset Gebyok Part Right.png" />
+          <img
+            id="gebyok-right-detail"
+            src="asset/Asset Gebyok Part Right.png"
+          />
           <img id="gunungan-left-detail" src="asset/Asset Gunungan.png" />
           <img id="gunungan-right-detail" src="asset/Asset Gunungan.png" />
           <img id="wayangLeft-detail" src="asset/Asset Wayang Shinta.png" />
           <img id="wayangRight-detail" src="asset/Asset Wayang Rama.png" />
           <p
-            style="text-align: center; width: 60%; margin: 0 auto 20px auto; padding: 200px 0 0 0;">Dengan
-            memohon rahmat dan ridho Allah Subhanahu wa Ta'ala, kami bermaksud
-            mengumumkan kepada Bapak/Ibu/Saudara/i acara pernikahan kami:</p>
-          <p style="text-align: center;">Minggu, 27 Juli 2025</p>
-          <div id="countdown"
-            style="display: flex; justify-content: center; gap: 10px; margin: 20px 0 50px 0;">
+            style="
+              text-align: center;
+              width: 60%;
+              margin: 0 auto 20px auto;
+              padding: 200px 0 0 0;
+            "
+          >
+            Dengan memohon rahmat dan ridho Allah Subhanahu wa Ta'ala, kami
+            bermaksud mengumumkan kepada Bapak/Ibu/Saudara/i acara pernikahan
+            kami:
+          </p>
+          <p style="text-align: center">Minggu, 27 Juli 2025</p>
+          <div
+            id="countdown"
+            style="
+              display: flex;
+              justify-content: center;
+              gap: 10px;
+              margin: 20px 0 50px 0;
+            "
+          >
             <div>
-              <span id="days"
-                style="font-size: 24px; font-weight: bold;color: #7E4B5E">00</span>
+              <span
+                id="days"
+                style="font-size: 24px; font-weight: bold; color: #7e4b5e"
+                >00</span
+              >
               <p>Hari</p>
             </div>
-            <p style="font-size: 20px; margin: 10px 0 0 0;">:</p>
+            <p style="font-size: 20px; margin: 10px 0 0 0">:</p>
             <div>
-              <span id="hours"
-                style="font-size: 24px; font-weight: bold;color: #7E4B5E">00</span>
+              <span
+                id="hours"
+                style="font-size: 24px; font-weight: bold; color: #7e4b5e"
+                >00</span
+              >
               <p>Jam</p>
             </div>
-            <p style="font-size: 20px; margin: 10px 0 0 0;">:</p>
+            <p style="font-size: 20px; margin: 10px 0 0 0">:</p>
             <div>
-              <span id="minutes"
-                style="font-size: 24px; font-weight: bold;color: #7E4B5E">00</span>
+              <span
+                id="minutes"
+                style="font-size: 24px; font-weight: bold; color: #7e4b5e"
+                >00</span
+              >
               <p>Menit</p>
             </div>
-            <p style="font-size: 20px; margin: 10px 0 0 0;">:</p>
+            <p style="font-size: 20px; margin: 10px 0 0 0">:</p>
             <div>
-              <span id="seconds"
-                style="font-size: 24px; font-weight: bold;color: #7E4B5E">00</span>
+              <span
+                id="seconds"
+                style="font-size: 24px; font-weight: bold; color: #7e4b5e"
+                >00</span
+              >
               <p>Detik</p>
             </div>
           </div>
           <div class="vertical-line"></div>
-          <div style="text-align: center; margin: 30px 0 0 0;">
+          <div style="text-align: center; margin: 30px 0 0 0">
             <h2
-              style="font-family: 'Great Vibes'; font-size: 40px;color: #7E4B5E">Akad
-              Nikah</h2>
-            <p>08.00 - 09.00 WIB </p>
-            <p>Bertempat di hotel Royal Bogor</p>
+              style="
+                font-family: 'Great Vibes';
+                font-size: 40px;
+                color: #7e4b5e;
+              "
+            >
+              Akad Nikah
+            </h2>
+            <p>08.00 - 09.00 WIB</p>
           </div>
-          <div class="countdown-container"
-            style="text-align: center;">
+          <div class="countdown-container" style="text-align: center">
             <div class="vertical-line"></div>
             <img
               src="https://raw.githubusercontent.com/Invitato/public/f7e2d04a3f0ca80c07faf5ff34c0f85932b681f1/invitato.net/template-clarissasandro/Asset%20Cincin.svg"
               alt="cincin"
-              style="position: relative; width: 40px;">
+              style="position: relative; width: 40px"
+              />
             <h2
-              style="font-family: 'Great Vibes'; font-size: 40px;color: #7E4B5E">Resepsi</h2>
-            <p>08.00 - 09.00 WIB </p>
+            style="
+                font-family: 'Great Vibes';
+                font-size: 40px;
+                color: #7e4b5e;
+              "
+            >
+            Resepsi
+            </h2>
+            <p>11.00 - 13.00 WIB</p>
+            <div style="margin: 10px 0 0 0 ;">
+              <p>Bertempat di:</p>
+              <p style="font-weight: bold;">Hotel Royal Bogor</p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3558815597075!2d106.79275117587245!3d-6.602620464545506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c54b6f5968ff%3A0x5a9ee1d6644d7172!2sRoyal%20Hotel%20Bogor!5e0!3m2!1sid!2sid!4v1753019979767!5m2!1sid!2sid" width="full" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>          </div>
+            </div>
           </div>
-        </div>
-        <div class="section-photo-video"
-          style="position: relative;margin: 0 0 20px 0;">
+          <div
+          class="section-photo-video"
+          style="position: relative; margin: 0 0 20px 0"
+          >
           <div class="card-photo">
             <h2
-              style="text-align: center; margin: 50px 0;font-family: 'Great Vibes'; font-size: 40px;color: #7E4B5E">a
-              Portrait of</h2>
-            <img id="butterfly-photo" src="asset/Asset Butterfly.png" />
-            <img id="flower-photo-left1" src="asset/Asset Flower 1.png" />
-            <img id="flower-photo-left2" src="asset/Asset Flower 2.png" />
-            <img id="flower-photo-right1" src="asset/Asset Flower 2.png" />
-            <img id="flower-photo-right2" src="asset/Asset Flower 1.png" />
-            <img
-              src="./asset/Asset img-1.jpg"
-              alt="photo-section1"
-              style="position: relative;width: 70%; left: 50%; transform: translate(-50%); border-radius: 10px;">
-            <div
-              style="position: relative; display: flex; width: 70%;left: 50%; transform: translate(-50%); margin: 0 0 5px 0;">
-              <img
-                src="./asset/Asset img-2.jpg"
-                alt="photo-section2"
-                style="position: relative;width: 50%; border-radius: 10px; margin: 0 2px 0 0;">
-              <img
-                src="./asset/Asset img-3.jpg"
-                alt="photo-section3"
-                style="position: relative;width: 50%; border-radius: 10px; margin: 0 0 0 2px;">
+            style="
+                text-align: center;
+                margin: 50px 0;
+                font-family: 'Great Vibes';
+                font-size: 40px;
+                color: #7e4b5e;
+                "
+            >
+              a Portrait of
+            </h2>
+            <div class="slider">
+              <div class="container">
+                <div class="mySlides">
+                  <img src="./asset/Asset img-1.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                  <img src="./asset/Asset img-2.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                  <img src="./asset/Asset img-3.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                  <img src="./asset/Asset img-4.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                  <img src="./asset/Asset img-5.jpg" style="width:100%">
+                </div>
+                  
+                <div class="mySlides">
+                  <img src="./asset/Asset img-6.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                  <img src="./asset/Asset img-7.jpg" style="width:100%">
+                </div>
+              
+                <div class="mySlides">
+                  <img src="./asset/Asset img-8.jpg" style="width:100%">
+                </div>
+              
+                <div class="mySlides">
+                  <img src="./asset/Asset img-9.jpg" style="width:100%">
+                </div>
+                  
+                <div class="mySlides">
+                  <img src="./asset/Asset img-10.jpg" style="width:100%">
+                </div>
+              
+                <div class="mySlides">
+                  <img src="./asset/Asset img-11.jpg" style="width:100%">
+                </div>
+                  
+                <div class="mySlides">
+                  <img src="./asset/Asset img-12.jpg" style="width:100%">
+                </div>
+                  
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="row">
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pre-Wedding Photo 1">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Pre-Wedding Photo 2">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Pre-Wedding Photo 3">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pre-Wedding Photo 4">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Pre-Wedding Photo 5">
+                    </div>    
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Pre-Wedding Photo 6">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-7.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pre-Wedding Photo 1">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-8.jpg" style="width:100%" onclick="currentSlide(2)" alt="Pre-Wedding Photo 2">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-9.jpg" style="width:100%" onclick="currentSlide(3)" alt="Pre-Wedding Photo 3">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-10.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pre-Wedding Photo 4">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-11.jpg" style="width:100%" onclick="currentSlide(5)" alt="Pre-Wedding Photo 5">
+                    </div>    
+                    <div class="column">
+                      <img class="demo cursor" src="./asset/Asset img-12.jpg" style="width:100%" onclick="currentSlide(6)" alt="Pre-Wedding Photo 6">
+                    </div>
+                </div>
+              </div>
             </div>
-            <div
-              style="position: relative; display: flex; width: 70%;left: 50%; transform: translate(-50%); margin: 0 0 5px 0;">
-              <img
-                src="./asset/Asset img-4.jpg"
-                alt="photo-section2"
-                style="position: relative;width: 50%; border-radius: 10px; margin: 0 2px 0 0;">
-              <img
-                src="./asset/Asset img-5.jpg"
-                alt="photo-section3"
-                style="position: relative;width: 50%; border-radius: 10px; margin: 0 0 0 2px;">
-            </div>
-            <div
-              style="position: relative; display: flex; width: 70%;left: 50%; transform: translate(-50%); margin: 0 0 5px 0;">
-              <img
-                src="./asset/Asset img-6.jpg"
-                alt="photo-section2"
-                style="position: relative;width: 50%; border-radius: 10px; margin: 0 2px 0 0;">
-              <img
-                src="./asset/Asset img-7.jpg"
-                alt="photo-section3"
-                style="position: relative;width: 50%; border-radius: 10px; margin: 0 0 0 2px;">
-            </div>
-            <div
-              style="position: relative; display: flex; width: 70%;left: 50%; transform: translate(-50%); margin: 0 0 5px 0;">
-              <img
-                src="./asset/Asset img-8.jpg"
-                alt="photo-section2"
-                style="position: relative;width: 50%; border-radius: 10px; margin: 0 2px 0 0;">
-              <img
-                src="./asset/Asset img-9.jpg"
-                alt="photo-section3"
-                style="position: relative;width: 50%; border-radius: 10px; margin: 0 0 0 2px;">
-            </div>
-            <div
-              style="position: relative; display: flex; width: 70%;left: 50%; transform: translate(-50%); margin: 0 0 5px 0;">
-              <img
-                src="./asset/Asset img-10.jpg"
-                alt="photo-section2"
-                style="position: relative;width: 50%; border-radius: 10px; margin: 0 2px 0 0;">
-              <img
-                src="./asset/Asset img-11.jpg"
-                alt="photo-section3"
-                style="position: relative;width: 50%; border-radius: 10px; margin: 0 0 0 2px;">
-            </div>
-          </div>
           <div class="card-video">
             <h2
-              style="text-align: center; margin: 50px 0;font-family: 'Great Vibes'; font-size: 40px;color: #7E4B5E">a
-              Video of</h2>
+              style="
+                text-align: center;
+                margin: 50px 0 50px 0;
+                font-family: 'Great Vibes';
+                font-size: 40px;
+                color: #7e4b5e;
+              "
+            >
+              a Video of
+            </h2>
             <iframe
-              src="https://www.youtube.com/embed/_3HoUl6dE_c"
+              src="https://www.youtube.com/embed/SjhdUbLmA6c"
               frameborder="0"
               allowfullscreen
-              style="width: 100%;  border-radius: 10px;"></iframe>
-            <p style="margin: 10px 0 0 0;">Jika Anda mengalami kendala dalam
-              memutar video diatas, silakan klik tombol dibawah ini:</p>
+              style="width: 100%; border-radius: 10px"
+            ></iframe>
+            <p style="margin: 10px 0 0 0">
+              Jika Anda mengalami kendala dalam memutar video diatas, silakan
+              klik tombol dibawah ini:
+            </p>
             <button class="igBtn">
-              <a href="https://www.youtube.com/watch?v=_3HoUl6dE_c">Buka Via
-                Youtube</a>
+              <a href="https://youtu.be/SjhdUbLmA6c">Buka Via Youtube</a>
             </button>
           </div>
         </div>
@@ -280,23 +467,39 @@
           <h2 class="form-undangan-title">Konfirmasi Kehadiran</h2>
           <form id="form-undangan">
             <label class="form-undangan-label" for="nama-form">Nama</label>
-            <input class="form-undangan-input" type="text" id="nama-form"
-              name="nama-form" placeholder="Nama Anda" required>
+            <input
+              class="form-undangan-input"
+              type="text"
+              id="nama-form"
+              name="nama-form"
+              placeholder="Nama Anda"
+              required
+            />
 
             <label class="form-undangan-label" for="doa">Titip Doa</label>
-            <textarea class="form-undangan-textarea" id="doa" name="doa"
-              rows="4" placeholder="Tuliskan doa Anda..."></textarea>
+            <textarea
+              class="form-undangan-textarea"
+              id="doa"
+              name="doa"
+              rows="4"
+              placeholder="Tuliskan doa Anda..."
+            ></textarea>
 
             <label class="form-undangan-label" for="kehadiran">Kehadiran</label>
-            <select class="form-undangan-select" id="kehadiran" name="kehadiran"
-              required>
+            <select
+              class="form-undangan-select"
+              id="kehadiran"
+              name="kehadiran"
+              required
+            >
               <option value>-- Pilih Kehadiran --</option>
               <option value="Hadir">Hadir</option>
               <option value="Tidak Hadir">Tidak Hadir</option>
             </select>
 
-            <button class="form-undangan-button" id="submitBtn"
-              type="submit">Kirim</button>
+            <button class="form-undangan-button" id="submitBtn" type="submit">
+              Kirim
+            </button>
             <p class="form-undangan-status" id="status"></p>
           </form>
         </div>
@@ -312,13 +515,14 @@
           <img id="flowerCenter-thanks2" src="asset/Asset Flower 2.png" />
           <img id="flowerLeft-thanks" src="asset/Asset Flower 1.png" />
           <img id="flowerRight-thanks" src="asset/Asset Flower 1.png" />
-          <div style="text-align: center; top: 50%; position: relative;">
-            <p style="margin: 0 0 15px 0;">Terima Kasih,</p>
-            <h2
-              style="font-size: 40px; font-family: 'Great Vibes', cursive;">Windy
-              &</h2>
-            <h2
-              style="font-size: 40px; font-family: 'Great Vibes', cursive;">Yusuf</h2>
+          <div style="text-align: center; top: 50%; position: relative">
+            <p style="margin: 0 0 15px 0">Terima Kasih,</p>
+            <h2 style="font-size: 40px; font-family: 'Great Vibes', cursive">
+              Windy &
+            </h2>
+            <h2 style="font-size: 40px; font-family: 'Great Vibes', cursive">
+              Yusuf
+            </h2>
           </div>
         </div>
       </div>
